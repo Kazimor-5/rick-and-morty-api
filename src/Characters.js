@@ -1,6 +1,6 @@
 import Character from './Character';
 
-const Characters = (characters) => {
+const Characters = ({ characters }) => {
   return (
     <ul className='characters-list'>
       {characters.map((character) => {

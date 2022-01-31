@@ -5,11 +5,10 @@ const url = 'https://rickandmortyapi.com/api/character';
 
 const App = () => {
   const [characters, setCharacter] = useState([]);
-
   const getCharacters = async () => {
     const response = await fetch(url);
-    const characters = await response.json();
-    console.log(characters);
+    let characters = await response.json();
+    characters = characters.results;
     setCharacter(characters);
   };
 
@@ -19,8 +18,8 @@ const App = () => {
 
   return (
     <main className='container'>
-      <h1 className='title head-title'>Rick et Morty API</h1>
-      {/* <Characters characters={characters} /> */}
+      <h1 className='title head-title'>Rick and Morty</h1>
+      <Characters characters={characters} />
     </main>
   );
 };
