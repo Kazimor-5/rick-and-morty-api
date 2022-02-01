@@ -42,22 +42,34 @@ const Character = ({
           }
         >
           <p className='status'>
-            Status: {status}
-            <span
-              style={{
-                backgroundColor:
-                  status === 'Alive'
-                    ? 'green'
-                    : status === 'unknown'
-                    ? 'yellow'
-                    : 'red',
-              }}
-            ></span>
+            Status:{' '}
+            <span className='text'>
+              {status}
+              <span
+                className='pastille'
+                style={{
+                  backgroundColor:
+                    status === 'Alive'
+                      ? 'green'
+                      : status === 'unknown'
+                      ? 'yellow'
+                      : 'red',
+                }}
+              ></span>
+            </span>
           </p>
-          <p className='species'>Species: {species}</p>
-          <p className='origin'>Origin: {origin.name}</p>
-          <p className='location'>Last known location: {location.name}</p>
-          <p className='gender'>Gender: {gender}</p>
+          <p className='species'>
+            Species: <span className='text'>{species}</span>
+          </p>
+          <p className='origin'>
+            Origin: <span className='text'>{origin.name}</span>
+          </p>
+          <p className='location'>
+            Last known location: <span className='text'>{location.name}</span>
+          </p>
+          <p className='gender'>
+            Gender: <span className='text'>{gender}</span>
+          </p>
         </div>
       </div>
     </li>

@@ -242,6 +242,7 @@ ul {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-2);
   cursor: pointer;
+  transition: all 350ms linear;
 }
 
 .card:hover {
@@ -249,6 +250,7 @@ ul {
 }
 
 .content {
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -275,7 +277,7 @@ ul {
   display: flex;
   align-items: center;
   min-height: 3.25rem;
-  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--cyan);
   text-shadow: 3px 3px 2px #80cf85, 4px 4px 2px #f3fee3;
   font-size: 2rem;
@@ -292,16 +294,29 @@ ul {
 }
 
 .show-infos {
-  height: 15rem;
+  min-height: 11rem;
 }
 
-span {
-  margin-left: 1rem;
+.pastille {
+  margin-left: 0.5rem;
   display: inline-block;
   width: 1rem;
   height: 1rem;
-  background-color: var(--green-dark);
   border-radius: 50%;
+}
+
+.status,
+.species,
+.origin,
+.location,
+.gender {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.text {
+  font-weight: 400;
 }
 
 /* ! MEDIAQUERIE */
