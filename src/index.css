@@ -7,6 +7,7 @@
   font-style: normal;
 }
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+
 /* ! ========================ROOTING======================= */
 
 html {
@@ -200,9 +201,18 @@ ul {
   justify-content: space-around;
 }
 
+.heading {
+  height: 18rem;
+  display: flex;
+  align-items: center;
+  background: url(../public/loading-portal.gif) no-repeat center;
+  text-align: center;
+  margin: 1.5rem;
+}
+
 .head-title {
+  margin: 1.5rem 0 0 5rem;
   font-size: 5rem;
-  margin-top: 1.25rem;
   color: var(--cyan);
   padding: 1rem;
   border-radius: var(--border-radius);
@@ -212,10 +222,13 @@ ul {
 /* ! LIST */
 
 .characters-list {
-  width: 80%;
+  width: 90%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
 }
 
 .card {
@@ -228,6 +241,7 @@ ul {
   background: var(--white);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-2);
+  cursor: pointer;
 }
 
 .card:hover {
@@ -235,24 +249,50 @@ ul {
 }
 
 .content {
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ! IMAGE */
 .img-container {
   width: 95%;
   border-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 .img {
   border-radius: var(--border-radius);
+  transition: all 350ms ease-in-out;
+}
+
+.card:hover .img {
+  transform: scale(1.05);
 }
 
 .character-name {
+  display: flex;
+  align-items: center;
+  min-height: 3.25rem;
   margin-top: 1rem;
   color: var(--cyan);
   text-shadow: 3px 3px 2px #80cf85, 4px 4px 2px #f3fee3;
   font-size: 2rem;
+}
+
+.long-name {
+  font-size: 1.25rem;
+}
+
+.infos-container {
+  height: 0;
+  overflow: hidden;
+  transition: all 350ms ease-in;
+}
+
+.show-infos {
+  height: 15rem;
 }
 
 span {
@@ -266,12 +306,26 @@ span {
 
 /* ! MEDIAQUERIE */
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1300px) {
   .characters-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .content {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .heading {
+    background: none;
+  }
+
+  .head-title {
+    margin: 0;
+  }
+
+  .characters-list {
+    grid-template-columns: 1fr;
   }
 }

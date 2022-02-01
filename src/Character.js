@@ -7,11 +7,17 @@ const Character = ({
   origin,
   location,
   image,
-  episode: episodes,
+  cardID,
+  toggleInfo,
 }) => {
   return (
-    // TODO Quand je clique sur l'élément <li> j'affiche une nouvelle page qui donne les épisodes dans lesquelles le personnage est apparu
-    <li key={id} className='card'>
+    <li
+      key={id}
+      className='card'
+      onClick={() => {
+        toggleInfo(id);
+      }}
+    >
       {/* IMAGES */}
       <div className='img-container'>
         <img src={image} alt={name} className='img' />
@@ -19,16 +25,33 @@ const Character = ({
 
       {/* TITRE */}
       <div className='content'>
-        <div className='title-container'>
-          <h4 className='title character-name'>{name}</h4>
-        </div>
+        <h4
+          className={
+            name.length >= 16
+              ? 'title character-name long-name'
+              : 'title character-name'
+          }
+        >
+          {name}
+        </h4>
 
         {/* INFOS */}
-        <div className='infos-container'>
+        <div
+          className={
+            cardID === id ? 'infos-container show-infos' : 'infos-container'
+          }
+        >
           <p className='status'>
             Status: {status}
             <span
-              style={{ backgroundColor: status === 'Alive' ? 'green' : 'red' }}
+              style={{
+                backgroundColor:
+                  status === 'Alive'
+                    ? 'green'
+                    : status === 'unknown'
+                    ? 'yellow'
+                    : 'red',
+              }}
             ></span>
           </p>
           <p className='species'>Species: {species}</p>
