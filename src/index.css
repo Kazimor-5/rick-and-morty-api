@@ -38,9 +38,7 @@ html {
   /* ? REST OF THE COLORS */
   --black: #222;
   --white: #fff;
-  --red-light: #f8d7da;
   --red-dark: #842029;
-  --green-light: #d1e7dd;
   --green-dark: #0f5132;
   --cyan: #00b5c9;
 
@@ -93,7 +91,6 @@ h5 {
 }
 
 h1 {
-  margin-top: 0;
   font-size: 3.052rem;
 }
 
@@ -156,24 +153,6 @@ ul {
 
 .btn-block {
   width: 100%;
-}
-
-/* ? SPINNER */
-
-@keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.loading {
-  margin: 0 auto;
-  width: 6rem;
-  height: 6rem;
-  border: 5px solid var(--green-light);
-  border-radius: 50%;
-  border-top-color: var(--green-dark);
-  animation: spinner 0.6s linear infinite;
 }
 
 .title {
@@ -242,7 +221,7 @@ ul {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-2);
   cursor: pointer;
-  transition: all 350ms linear;
+  transition: var(--transition);
 }
 
 .card:hover {
@@ -255,22 +234,6 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-/* ! IMAGE */
-.img-container {
-  width: 95%;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-}
-
-.img {
-  border-radius: var(--border-radius);
-  transition: all 350ms ease-in-out;
-}
-
-.card:hover .img {
-  transform: scale(1.05);
 }
 
 .character-name {
@@ -290,7 +253,7 @@ ul {
 .infos-container {
   height: 0;
   overflow: hidden;
-  transition: all 350ms ease-in;
+  transition: var(--transition);
 }
 
 .show-infos {
@@ -317,6 +280,23 @@ ul {
 
 .text {
   font-weight: 400;
+}
+
+/* ! IMAGE */
+
+.img-container {
+  width: 95%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.img {
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.card:hover .img {
+  transform: scale(1.05);
 }
 
 /* ! MEDIAQUERIE */

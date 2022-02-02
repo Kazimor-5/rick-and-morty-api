@@ -50,10 +50,10 @@ const Character = ({
                 style={{
                   backgroundColor:
                     status === 'Alive'
-                      ? 'green'
+                      ? 'var(--green-dark)'
                       : status === 'unknown'
                       ? 'yellow'
-                      : 'red',
+                      : 'var(--red-dark)',
                 }}
               ></span>
             </span>
@@ -77,7 +77,3 @@ const Character = ({
 };
 
 export default Character;
-
-/*
-status === 'Alive' ? span.style.backgroundColor('green') : span.style.backgroundColor('red')
-*/
