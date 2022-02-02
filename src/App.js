@@ -7,6 +7,7 @@ const url = 'https://rickandmortyapi.com/api/character';
 const App = () => {
   const [characters, setCharacter] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
   const getCharacters = async () => {
     setIsLoading(true);
     const response = await fetch(url);

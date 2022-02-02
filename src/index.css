@@ -234,7 +234,6 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: var(--transition);
 }
 
 .character-name {
@@ -254,13 +253,12 @@ ul {
 .infos-container {
   height: 0;
   overflow: hidden;
-  transition: var(--transition);
+  transition: all 350ms ease-out 200ms;
 }
 
 .show-infos {
   margin-top: 0.5rem;
-  min-height: 11rem;
-  transition: var(--transition);
+  height: 12.5rem;
 }
 
 .pastille {
@@ -277,7 +275,7 @@ ul {
 .location,
 .gender {
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   margin: 0;
 }
 

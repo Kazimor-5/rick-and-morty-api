@@ -27,7 +27,7 @@ const Character = ({
       <div className='content'>
         <h4
           className={
-            name.length >= 16
+            name.length >= 20
               ? 'title character-name long-name'
               : 'title character-name'
           }
