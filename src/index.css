@@ -6,7 +6,7 @@
   font-weight: normal;
   font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* ! ========================ROOTING======================= */
 
@@ -44,7 +44,7 @@ html {
 
   /* ? FONTS */
   --headingFont: 'getSchwifty';
-  --bodyFont: 'Crimson Pro', serif;
+  --bodyFont: 'Montserrat', sans-serif;
   --small-text: 0.7em;
 
   /* ? REST OF THE VARIABLES */
@@ -52,7 +52,7 @@ html {
   --textColor: var(--grey-900);
   --border-radius: 0.5rem;
   --letter-spacing: 1px;
-  --transition: all 0.3s ease-in-out;
+  --transition: all 350ms ease-out;
   --max-width: 1170px;
   --fixed-width: 600px;
 
@@ -234,6 +234,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: var(--transition);
 }
 
 .character-name {
@@ -257,7 +258,9 @@ ul {
 }
 
 .show-infos {
+  margin-top: 0.5rem;
   min-height: 11rem;
+  transition: var(--transition);
 }
 
 .pastille {
@@ -273,7 +276,7 @@ ul {
 .origin,
 .location,
 .gender {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.25rem;
   margin: 0;
 }
