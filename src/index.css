@@ -73,7 +73,6 @@ body {
 }
 
 p {
-  margin-bottom: 1rem;
   max-width: 40em;
 }
 
@@ -258,7 +257,7 @@ ul {
 
 .show-infos {
   margin-top: 0.5rem;
-  height: 12.5rem;
+  height: 12rem;
 }
 
 .pastille {
@@ -275,7 +274,6 @@ ul {
 .location,
 .gender {
   font-weight: 700;
-  font-size: 1.05rem;
   margin: 0;
 }
 
