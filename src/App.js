@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Characters from './Characters';
 import Loading from './Loading';
+import ButtonUp from './ButtonUp';
 
 const url = 'https://rickandmortyapi.com/api/character';
 
@@ -30,12 +31,17 @@ const App = () => {
   }
 
   return (
-    <main className='container'>
-      <div className='heading'>
-        <h1 className='title head-title'>Rick and Morty</h1>
-      </div>
-      <Characters characters={characters} />
-    </main>
+    <>
+      <main className='container'>
+        <div className='heading'>
+          <h1 className='title head-title'>Rick and Morty</h1>
+        </div>
+        <Characters characters={characters} />
+        <footer className='footer'>
+          <ButtonUp />
+        </footer>
+      </main>
+    </>
   );
 };
 

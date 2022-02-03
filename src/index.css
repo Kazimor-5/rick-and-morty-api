@@ -11,8 +11,9 @@
 /* ! ========================ROOTING======================= */
 
 html {
-  font-size: 100%;
-} /*16px*/
+  font-size: 100%; /* 16px */
+  scroll-behavior: smooth;
+}
 
 *,
 ::after,
@@ -197,6 +198,13 @@ ul {
   text-shadow: 2px 2px 2px #80cf85, 4px 3px 2px #f3fee3;
 }
 
+.footer {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 /* ! LIST */
 
 .characters-list {
@@ -296,6 +304,47 @@ ul {
 
 .card:hover .img {
   transform: scale(1.05);
+}
+
+/* ! BUTTON UP */
+
+.btnUp {
+  position: fixed;
+  bottom: 0;
+  color: var(--cyan);
+  font-size: 2.5rem;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 1rem;
+}
+
+.btnUp:hover {
+  box-shadow: none;
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
+}
+
+/* ! KEYFRAME */
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 /* ! MEDIAQUERIE */
