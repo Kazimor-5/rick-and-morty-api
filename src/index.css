@@ -359,13 +359,14 @@ ul {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 570px) {
   .heading {
     background: none;
   }
 
   .head-title {
     margin: 0;
+    font-size: 4rem;
   }
 
   .characters-list {
