@@ -31,17 +31,15 @@ const App = () => {
   }
 
   return (
-    <>
-      <main className='container'>
-        <div className='heading'>
-          <h1 className='title head-title'>Rick and Morty</h1>
-        </div>
-        <Characters characters={characters} />
-        <footer className='footer'>
-          <ButtonUp />
-        </footer>
-      </main>
-    </>
+    <main className='container'>
+      <div className='heading'>
+        <h1 className='title head-title'>Rick and Morty</h1>
+      </div>
+      <Characters characters={characters} />
+      <footer className='footer'>
+        <ButtonUp />
+      </footer>
+    </main>
   );
 };
 
