@@ -5,7 +5,7 @@ import ButtonUp from './ButtonUp';
 import ReactPaginate from 'react-paginate';
 
 const url = 'https://rickandmortyapi.com/api/character/?page=';
-const searchUrl = 'https://rickandmortyapi.com/api/character/?name=';
+// const searchUrl = 'https://rickandmortyapi.com/api/character/?name=';
 
 const App = () => {
   const [characters, setCharacter] = useState([]);
