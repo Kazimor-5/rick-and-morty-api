@@ -1,9 +1,8 @@
 import Character from './Character';
 import { useState } from 'react';
 
-const Characters = ({ characters, pagesVisited, characterPerPage }) => {
+const Characters = ({ characters }) => {
   const [cardID, setCardID] = useState('');
-
   const toggleInfo = (id) => {
     if (cardID === id) {
       return setCardID('');
@@ -13,18 +12,16 @@ const Characters = ({ characters, pagesVisited, characterPerPage }) => {
 
   return (
     <ul className='characters-list'>
-      {characters
-        .slice(pagesVisited, pagesVisited + characterPerPage)
-        .map((character) => {
-          return (
-            <Character
-              key={character.id}
-              {...character}
-              cardID={cardID}
-              toggleInfo={toggleInfo}
-            />
-          );
-        })}
+      {characters.map((character) => {
+        return (
+          <Character
+            key={character.id}
+            {...character}
+            cardID={cardID}
+            toggleInfo={toggleInfo}
+          />
+        );
+      })}
     </ul>
   );
 };

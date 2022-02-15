@@ -29,7 +29,7 @@ const ButtonUp = () => {
   return (
     <>
       {showButton ? (
-        <button className='btn btnUp' onClick={() => scrollToUp()}>
+        <button className='btn btn-up' onClick={() => scrollToUp()}>
           <FaChevronUp />
         </button>
       ) : (
