@@ -306,45 +306,38 @@ ul {
   transform: scale(1.05);
 }
 
-/* ! BUTTON UP */
+/* ! PAGINATION */
 
-.btnUp {
-  position: fixed;
-  bottom: 0;
-  color: var(--cyan);
-  font-size: 2.5rem;
-  border: none;
-  box-shadow: none;
-  margin-bottom: 1rem;
+.pagination {
+  margin: 0 auto;
+  width: 60%;
 }
 
-.btnUp:hover {
-  box-shadow: none;
-  -webkit-animation: rotate-center 0.6s ease-in-out both;
-  animation: rotate-center 0.6s ease-in-out both;
+.pagination-btn {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-/* ! KEYFRAME */
-
-@-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+.pagination-btn a {
+  padding: 0.75rem;
+  background: #68a07a;
+  color: var(--white);
+  box-shadow: var(--shadow-2);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
 }
-@keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+
+.pagination-btn a:hover {
+  background: #8eb89b;
+  box-shadow: var(--shadow-4);
+}
+
+.paginationActive a {
+  background: #428859;
 }
 
 /* ! MEDIAQUERIE */
